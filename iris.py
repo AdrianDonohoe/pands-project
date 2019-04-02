@@ -2,36 +2,26 @@
 
 import pandas as pd
 import matplotlib.pyplot as plot
-# import numpy as np
 
+# Read in the CSV as dataframe
 df = pd.read_csv('iris.csv')
 
-#plot.hist(df['sepal_length'])
-#plot.show()
-
-#plot.hist(df['sepal_width'])
-#plot.show()
-
-#plot.hist(df['petal_length'])
-#plot.show()
-
-#plot.hist(df['petal_width'])
-#plot.show()
-
-
 # Adapted from https://stackoverflow.com/a/17071908
-
+# Separate species into different dataframes
 setosa = df.loc[df['species'] == 'setosa']
 virginica = df.loc[df['species'] == 'virginica']
 versicolor = df.loc[df['species'] == 'versicolor']
 
 # Adapted from https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
-s = pd.Series(range(0,50))
+s = pd.Series(range(0,50)) # makes a pandas Series used to reindex the virginica and versicolor indexes
 vi = virginica.set_index(s)
 ve = versicolor.set_index(s)
 
-plot.plot(setosa['sepal_length'],'b-',vi['sepal_length'],'r-',ve['sepal_length'],'g-')
-
+plot.plot(setosa['sepal_length'],'b.',vi['sepal_length'],'r.',ve['sepal_length'],'g.')
+plot.ylabel('Sepal Length in cm')
+plot.title('Measurements of Sepal lengths by species')
+labels = ['Setosa','Virginica','Versicolor']
+plot.legend(labels)
 plot.show()
 
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
