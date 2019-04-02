@@ -76,6 +76,30 @@ plot.xlabel('Sepal length in cm')
 plot.title('Stacked Histogram of Sepal Length by Species')
 plot.show()
 
+x1_multi = [setosa['sepal_width'],vi['sepal_width'],ve['sepal_width']]
+colours = ['blue','red','green']
+plot.hist(x1_multi,bins=10,stacked=True,color=colours)
+plot.legend(labels)
+plot.xlabel('Sepal width in cm')
+plot.title('Stacked Histogram of Sepal Width by Species')
+plot.show()
+
+x2_multi = [setosa['petal_length'],vi['petal_length'],ve['petal_length']]
+colours = ['blue','red','green']
+plot.hist(x2_multi,bins=10,stacked=True,color=colours)
+plot.legend(labels)
+plot.xlabel('Petal length in cm')
+plot.title('Stacked Histogram of Petal Length by Species')
+plot.show()
+
+x3_multi = [setosa['petal_width'],vi['petal_width'],ve['petal_width']]
+colours = ['blue','red','green']
+plot.hist(x3_multi,bins=10,stacked=True,color=colours)
+plot.legend(labels)
+plot.xlabel('Petal width in cm')
+plot.title('Stacked Histogram of Petal Width by Species')
+plot.show()
+
 
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
 #print('Setosa max sepal length is ', setosa['sepal_length'].max())
@@ -83,3 +107,8 @@ plot.show()
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
 #print('Setosa STD sepal length is ', setosa['sepal_length'].std())
 
+plot.subplot(4,4,1)
+plot.hist(x_multi,bins=10,stacked=True,color=colours)
+plot.subplot(4,4,2)
+plot.plot(vi['sepal_width'].values,vi['sepal_length'],'r+')
+plot.show()
