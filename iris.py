@@ -49,57 +49,58 @@ plot.show()
 
 
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
+plot.subplot(4,4,5)
 plot.plot(setosa['sepal_length'].values,setosa['sepal_width'].values,'b+',vi['sepal_length'].values,vi['sepal_width'].values,'r+',ve['sepal_length'].values,ve['sepal_width'].values,'g+')
 plot.legend(labels)
 plot.title('Pair plot of Sepal length and Sepal Width')
 plot.xlabel('Sepal length in cm')
 plot.ylabel('Sepal width in cm')
-plot.show()
+plot.subplot(4,4,9)
 plot.plot(setosa['sepal_length'].values,setosa['petal_length'].values,'b+',vi['sepal_length'].values,vi['petal_length'].values,'r+',ve['sepal_length'].values,ve['petal_length'].values,'g+')
 plot.legend(labels)
 plot.xlabel('Sepal length in cm')
 plot.ylabel('Petal length in cm')
 plot.title('Pair plot of Sepal length and Petal length')
-plot.show()
+plot.subplot(4,4,13)
 plot.plot(setosa['sepal_length'].values,setosa['petal_width'].values,'b+',vi['sepal_length'].values,vi['petal_width'].values,'r+',ve['sepal_length'].values,ve['petal_width'].values,'g+')
 plot.legend(labels)
 plot.xlabel('Sepal length in cm')
 plot.ylabel('Petal width in cm')
 plot.title('Pair plot of Sepal length and Petal Width')
-plot.show()
 
 # Adapted from https://matplotlib.org/examples/statistics/histogram_demo_multihist.html
+plot.subplot(4,4,1)
 x_multi = [setosa['sepal_length'],vi['sepal_length'],ve['sepal_length']]
 colours = ['blue','red','green']
 plot.hist(x_multi,bins=10,stacked=True,color=colours)
 plot.legend(labels)
 plot.xlabel('Sepal length in cm')
 plot.title('Stacked Histogram of Sepal Length by Species')
-plot.show()
 
+plot.subplot(4,4,6)
 x1_multi = [setosa['sepal_width'],vi['sepal_width'],ve['sepal_width']]
 colours = ['blue','red','green']
 plot.hist(x1_multi,bins=10,stacked=True,color=colours)
 plot.legend(labels)
 plot.xlabel('Sepal width in cm')
 plot.title('Stacked Histogram of Sepal Width by Species')
-plot.show()
 
+plot.subplot(4,4,11)
 x2_multi = [setosa['petal_length'],vi['petal_length'],ve['petal_length']]
 colours = ['blue','red','green']
 plot.hist(x2_multi,bins=10,stacked=True,color=colours)
 plot.legend(labels)
 plot.xlabel('Petal length in cm')
 plot.title('Stacked Histogram of Petal Length by Species')
-plot.show()
 
+plot.subplot(4,4,16)
 x3_multi = [setosa['petal_width'],vi['petal_width'],ve['petal_width']]
 colours = ['blue','red','green']
 plot.hist(x3_multi,bins=10,stacked=True,color=colours)
 plot.legend(labels)
 plot.xlabel('Petal width in cm')
 plot.title('Stacked Histogram of Petal Width by Species')
-plot.show()
+
 
 
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
@@ -108,3 +109,32 @@ plot.show()
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
 #print('Setosa STD sepal length is ', setosa['sepal_length'].std())
 
+plot.subplot(4,4,2)
+plot.plot(setosa['sepal_width'].values,setosa['sepal_length'].values,'b+',vi['sepal_width'].values,vi['sepal_length'].values,'r+',ve['sepal_width'].values,ve['sepal_length'].values,'g+')
+
+plot.subplot(4,4,10)
+plot.plot(setosa['sepal_width'].values,setosa['petal_length'].values,'b+',vi['sepal_width'].values,vi['petal_length'].values,'r+',ve['sepal_width'].values,ve['petal_length'].values,'g+')
+
+plot.subplot(4,4,14)
+plot.plot(setosa['sepal_width'].values,setosa['petal_width'].values,'b+',vi['sepal_width'].values,vi['petal_width'].values,'r+',ve['sepal_width'].values,ve['petal_width'].values,'g+')
+
+plot.subplot(4,4,3)
+plot.plot(setosa['petal_length'].values,setosa['sepal_length'].values,'b+',vi['petal_length'].values,vi['sepal_length'].values,'r+',ve['petal_length'].values,ve['sepal_length'].values,'g+')
+
+plot.subplot(4,4,7)
+plot.plot(setosa['petal_length'].values,setosa['sepal_width'].values,'b+',vi['petal_length'].values,vi['sepal_width'].values,'r+',ve['petal_length'].values,ve['sepal_width'].values,'g+')
+
+plot.subplot(4,4,15)
+plot.plot(setosa['petal_length'].values,setosa['petal_width'].values,'b+',vi['petal_length'].values,vi['petal_width'].values,'r+',ve['petal_length'].values,ve['petal_width'].values,'g+')
+
+plot.subplot(4,4,4)
+plot.plot(setosa['petal_width'].values,setosa['sepal_length'].values,'b+',vi['petal_width'].values,vi['sepal_length'].values,'r+',ve['petal_width'].values,ve['sepal_length'].values,'g+')
+
+
+plot.subplot(4,4,8)
+plot.plot(setosa['petal_width'].values,setosa['sepal_width'].values,'b+',vi['petal_width'].values,vi['sepal_width'].values,'r+',ve['petal_width'].values,ve['sepal_width'].values,'g+')
+
+plot.subplot(4,4,12)
+plot.plot(setosa['petal_width'].values,setosa['petal_length'].values,'b+',vi['petal_width'].values,vi['petal_length'].values,'r+',ve['petal_width'].values,ve['petal_length'].values,'g+')
+
+plot.show()
