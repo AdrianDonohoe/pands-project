@@ -50,12 +50,21 @@ plot.show()
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
 plot.plot(setosa['sepal_length'].values,setosa['sepal_width'].values,'b+',vi['sepal_length'].values,vi['sepal_width'].values,'r+',ve['sepal_length'].values,ve['sepal_width'].values,'g+')
 plot.legend(labels)
+plot.title('Pair plot of Sepal length and Sepal Width')
+plot.xlabel('Sepal length in cm')
+plot.ylabel('Sepal width in cm')
 plot.show()
 plot.plot(setosa['sepal_length'].values,setosa['petal_length'].values,'b+',vi['sepal_length'].values,vi['petal_length'].values,'r+',ve['sepal_length'].values,ve['petal_length'].values,'g+')
 plot.legend(labels)
+plot.xlabel('Sepal length in cm')
+plot.ylabel('Petal length in cm')
+plot.title('Pair plot of Sepal length and Petal length')
 plot.show()
 plot.plot(setosa['sepal_length'].values,setosa['petal_width'].values,'b+',vi['sepal_length'].values,vi['petal_width'].values,'r+',ve['sepal_length'].values,ve['petal_width'].values,'g+')
 plot.legend(labels)
+plot.xlabel('Sepal length in cm')
+plot.ylabel('Petal width in cm')
+plot.title('Pair plot of Sepal length and Petal Width')
 plot.show()
 
 # Adapted from https://matplotlib.org/examples/statistics/histogram_demo_multihist.html
@@ -63,6 +72,8 @@ x_multi = [setosa['sepal_length'],vi['sepal_length'],ve['sepal_length']]
 colours = ['blue','red','green']
 plot.hist(x_multi,bins=10,stacked=True,color=colours)
 plot.legend(labels)
+plot.xlabel('Sepal length in cm')
+plot.title('Stacked Histogram of Sepal Length by Species')
 plot.show()
 
 
