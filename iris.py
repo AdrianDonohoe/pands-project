@@ -17,27 +17,28 @@ s = pd.Series(range(0,50)) # makes a pandas Series used to reindex the virginica
 vi = virginica.set_index(s)
 ve = versicolor.set_index(s)
 
+plot.subplot(2,2,1)
 plot.plot(setosa['sepal_length'],'b.',vi['sepal_length'],'r.',ve['sepal_length'],'g.')
 plot.ylabel('Sepal Length in cm')
 plot.title('Measurements of Sepal lengths by species')
 labels = ['Setosa','Virginica','Versicolor']
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
-plot.show()
 
+plot.subplot(2,2,2)
 plot.plot(setosa['sepal_width'],'b.',vi['sepal_width'],'r.',ve['sepal_width'],'g.')
 plot.ylabel('Sepal Width in cm')
 plot.title('Measurements of Sepal widths by species')
 labels = ['Setosa','Virginica','Versicolor']
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
-plot.show()
 
+plot.subplot(2,2,3)
 plot.plot(setosa['petal_length'],'b.',vi['petal_length'],'r.',ve['petal_length'],'g.')
 plot.ylabel('Petal Length in cm')
 plot.title('Measurements of Petal lengths by species')
 labels = ['Setosa','Virginica','Versicolor']
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
-plot.show()
 
+plot.subplot(2,2,4)
 plot.plot(setosa['petal_width'],'b.',vi['petal_width'],'r.',ve['petal_width'],'g.')
 plot.ylabel('Petal Width in cm')
 plot.title('Measurements of Petal widths by species')
@@ -107,8 +108,3 @@ plot.show()
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
 #print('Setosa STD sepal length is ', setosa['sepal_length'].std())
 
-plot.subplot(4,4,1)
-plot.hist(x_multi,bins=10,stacked=True,color=colours)
-plot.subplot(4,4,2)
-plot.plot(vi['sepal_width'].values,vi['sepal_length'],'r+')
-plot.show()
