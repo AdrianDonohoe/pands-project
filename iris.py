@@ -104,8 +104,7 @@ plot.subplot(4,4,4)
 plot.plot(setosa['petal_width'].values,setosa['sepal_length'].values,'b+',label='setosa')
 plot.plot(vi['petal_width'].values,vi['sepal_length'].values,'r+',label='virginica')
 plot.plot(ve['petal_width'].values,ve['sepal_length'].values,'g+',label='versicolor')
-plot.legend(bbox_to_anchor=(0., 1.5, 0.5, .102))
-
+plot.legend(bbox_to_anchor=(0., 1.02, 1, .2), loc="lower left", mode="expand", ncol=3)
 
 plot.subplot(4,4,8)
 plot.plot(setosa['petal_width'].values,setosa['sepal_width'].values,'b+',vi['petal_width'].values,vi['sepal_width'].values,'r+',ve['petal_width'].values,ve['sepal_width'].values,'g+')
