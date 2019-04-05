@@ -121,3 +121,15 @@ plot.show()
 #print('Setosa mean sepal length is ', setosa['sepal_length'].mean())
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())
 #print('Setosa STD sepal length is ', setosa['sepal_length'].std())
+
+
+y=df.describe()
+y.to_csv('description.csv')
+
+sy=setosa.describe()
+sy.to_csv('setosa_description.csv')
+viy=vi.describe()
+viy.to_csv('virginica_description.csv')
+vey=ve.describe()
+vey.to_csv('versicolor_description.csv')
+

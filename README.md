@@ -18,6 +18,7 @@ Add tables and graphs
 Explain the python script. Read in the file, do some calculations, averages, standard deviations. Make some plots.
 
 References: Make sure to reference everything.
+https://donatstudios.com/CsvToMarkdownTable  CSV to markdown
 
 Worth a look : UC Irvine Machine Learning Repository. Iris data set.
 http://archive.ics.uci.edu/ml/datasets/Iris.
@@ -206,3 +207,61 @@ Fisher viewed himself as a scientist who was especially interested in biology. H
 | 6.2          | 3.4         | 5.4          | 2.3         | virginica  | 
 | 5.9          | 3.0         | 5.1          | 1.8         | virginica  | 
 
+
+Some basic calculations on the dataset:
+
+|       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
+|-------|--------------------|--------------------|--------------------|--------------------| 
+| count | 150.0              | 150.0              | 150.0              | 150.0              | 
+| mean  | 5.843333333333335  | 3.0540000000000007 | 3.7586666666666693 | 1.1986666666666672 | 
+| std   | 0.8280661279778629 | 0.4335943113621737 | 1.7644204199522617 | 0.7631607417008414 | 
+| min   | 4.3                | 2.0                | 1.0                | 0.1                | 
+| 25%   | 5.1                | 2.8                | 1.6                | 0.3                | 
+| 50%   | 5.8                | 3.0                | 4.35               | 1.3                | 
+| 75%   | 6.4                | 3.3                | 5.1                | 1.8                | 
+| max   | 7.9                | 4.4                | 6.9                | 2.5                | 
+
+Basic calculations on the Setosa Iris subset
+
+|       | sepal_length       | sepal_width         | petal_length       | petal_width         | 
+|-------|--------------------|---------------------|--------------------|---------------------| 
+| count | 50.0               | 50.0                | 50.0               | 50.0                | 
+| mean  | 5.005999999999999  | 3.4180000000000006  | 1.464              | 0.2439999999999999  | 
+| std   | 0.3524896872134512 | 0.38102439795469095 | 0.1735111594364455 | 0.10720950308167837 | 
+| min   | 4.3                | 2.3                 | 1.0                | 0.1                 | 
+| 25%   | 4.8                | 3.125               | 1.4                | 0.2                 | 
+| 50%   | 5.0                | 3.4                 | 1.5                | 0.2                 | 
+| 75%   | 5.2                | 3.6750000000000003  | 1.5750000000000002 | 0.3                 | 
+| max   | 5.8                | 4.4                 | 1.9                | 0.6                 | 
+
+
+Basic calculations on the Virginica Iris subset
+
+|       | sepal_length       | sepal_width        | petal_length       | petal_width         | 
+|-------|--------------------|--------------------|--------------------|---------------------| 
+| count | 50.0               | 50.0               | 50.0               | 50.0                | 
+| mean  | 6.587999999999998  | 2.9739999999999998 | 5.552              | 2.026               | 
+| std   | 0.635879593274432  | 0.3224966381726376 | 0.5518946956639835 | 0.27465005563666733 | 
+| min   | 4.9                | 2.2                | 4.5                | 1.4                 | 
+| 25%   | 6.2250000000000005 | 2.8                | 5.1                | 1.8                 | 
+| 50%   | 6.5                | 3.0                | 5.55               | 2.0                 | 
+| 75%   | 6.9                | 3.1750000000000003 | 5.875000000000001  | 2.3                 | 
+| max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
+
+
+Basic calculations on the Versicolor Iris subset
+
+|       | sepal_length       | sepal_width        | petal_length        | petal_width        | 
+|-------|--------------------|--------------------|---------------------|--------------------| 
+| count | 50.0               | 50.0               | 50.0                | 50.0               | 
+| mean  | 5.936              | 2.7700000000000005 | 4.26                | 1.3259999999999998 | 
+| std   | 0.5161711470638635 | 0.3137983233784114 | 0.46991097723995806 | 0.197752680004544  | 
+| min   | 4.9                | 2.0                | 3.0                 | 1.0                | 
+| 25%   | 5.6                | 2.525              | 4.0                 | 1.2                | 
+| 50%   | 5.9                | 2.8                | 4.35                | 1.3                | 
+| 75%   | 6.3                | 3.0                | 4.6                 | 1.5                | 
+| max   | 7.0                | 3.4                | 5.1                 | 1.8                | 
+
+![2x2 measurements plot](2x2 measurements.png)
+
+![4x4 subplot](4x4 Subplot of petal-sepal-lengths-widths.png)
