@@ -262,6 +262,7 @@ Basic calculations on the Versicolor Iris subset
 | 75%   | 6.3                | 3.0                | 4.6                 | 1.5                | 
 | max   | 7.0                | 3.4                | 5.1                 | 1.8                | 
 
-![2x2 measurements plot](2x2 measurements.png)
 
-![4x4 subplot](4x4 Subplot of petal-sepal-lengths-widths.png)
+![2x2_measurements_plot](2x2 measurements.png)
+
+![4x4_subplot](4x4 Subplot of petal-sepal-lengths-widths.png)
