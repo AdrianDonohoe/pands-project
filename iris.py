@@ -8,40 +8,43 @@ df = pd.read_csv('iris.csv')
 
 # Adapted from https://stackoverflow.com/a/17071908
 # Separate species into different dataframes
-setosa = df.loc[df['species'] == 'setosa']
+setosa = df.loc[df['species'] == 'setosa']   # Access a Dataframe by label species=setosa and assign to setosa variable
 virginica = df.loc[df['species'] == 'virginica']
 versicolor = df.loc[df['species'] == 'versicolor']
 
 # Adapted from https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
 s = pd.Series(range(0,50)) # makes a pandas Series used to reindex the virginica and versicolor indexes
 vi = virginica.set_index(s)
-ve = versicolor.set_index(s)
+ve = versicolor.set_index(s)  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
 
-plot.subplot(2,2,1)
-plot.plot(setosa['sepal_length'],'b.',vi['sepal_length'],'r.',ve['sepal_length'],'g.')
-plot.ylabel('Sepal Length in cm')
-labels = ['Setosa','Virginica','Versicolor']
+
+#https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html?highlight=subplot#matplotlib.pyplot.subplot
+plot.subplot(2,2,1) # make a subplot with 2 rows,2 columns at index 1
+plot.plot(setosa['sepal_length'],'b.',vi['sepal_length'],'r.',ve['sepal_length'],'g.') # Plot the sepal lenghts of the 3 species in blue,red and green dots
+plot.ylabel('Sepal Length in cm')  # Add a label to the y-axis
+labels = ['Setosa','Virginica','Versicolor'] # will use this list to add a legend
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
 
-plot.subplot(2,2,2)
+plot.subplot(2,2,2) # make a subplot with 2 rows,2 columns at index 2
 plot.plot(setosa['sepal_width'],'b.',vi['sepal_width'],'r.',ve['sepal_width'],'g.')
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
 
-plot.subplot(2,2,3)
+plot.subplot(2,2,3) # make a subplot with 2 rows,2 columns at index 3
 plot.plot(setosa['petal_length'],'b.',vi['petal_length'],'r.',ve['petal_length'],'g.')
 plot.ylabel('Petal Length in cm')
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
 
-plot.subplot(2,2,4)
+plot.subplot(2,2,4) # make a subplot with 2 rows,2 columns at index 4
 plot.plot(setosa['petal_width'],'b.',vi['petal_width'],'r.',ve['petal_width'],'g.')
 plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
 plot.suptitle('Measurements of Petal/Sepal widths/lengths by species') # Adapted from https://stackoverflow.com/a/25243066
 
-plot.show()
+plot.show()  # Show the 2x2 Subplot (Plot saved as 2x2_measurements.png and displayed in the README)
 
 
 
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
+# Using matplotlib instead of seaborn, I have recreated the 4x4 subplots from this kaggle project
 plot.subplot(4,4,5)
 plot.plot(setosa['sepal_length'].values,setosa['sepal_width'].values,'b+',vi['sepal_length'].values,vi['sepal_width'].values,'r+',ve['sepal_length'].values,ve['sepal_width'].values,'g+')
 plot.ylabel('Sepal width in cm')
