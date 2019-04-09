@@ -46,15 +46,15 @@ plot.show()  # Show the 2x2 Subplot (Plot saved as 2x2_measurements.png and disp
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
 # Using matplotlib instead of seaborn, I have recreated the 4x4 subplots from this kaggle project
 plot.subplot(4,4,5)
-plot.plot(setosa['sepal_length'].values,setosa['sepal_width'].values,'b+',vi['sepal_length'].values,vi['sepal_width'].values,'r+',ve['sepal_length'].values,ve['sepal_width'].values,'g+')
+plot.plot(setosa['sepal_length'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 plot.ylabel('Sepal width in cm')
 
 plot.subplot(4,4,9)
-plot.plot(setosa['sepal_length'].values,setosa['petal_length'].values,'b+',vi['sepal_length'].values,vi['petal_length'].values,'r+',ve['sepal_length'].values,ve['petal_length'].values,'g+')
+plot.plot(setosa['sepal_length'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 plot.ylabel('Petal length in cm')
 
 plot.subplot(4,4,13)
-plot.plot(setosa['sepal_length'].values,setosa['petal_width'].values,'b+',vi['sepal_length'].values,vi['petal_width'].values,'r+',ve['sepal_length'].values,ve['petal_width'].values,'g+')
+plot.plot(setosa['sepal_length'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.ylabel('Petal width in cm')
 plot.xlabel('Sepal length in cm')
 
@@ -82,39 +82,39 @@ plot.hist(x3_multi,bins=10,stacked=True,color=colours)
 plot.xlabel('Petal width in cm')
 
 plot.subplot(4,4,2)
-plot.plot(setosa['sepal_width'].values,setosa['sepal_length'].values,'b+',vi['sepal_width'].values,vi['sepal_length'].values,'r+',ve['sepal_width'].values,ve['sepal_length'].values,'g+')
+plot.plot(setosa['sepal_width'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['sepal_length'].to_numpy(),'g+')
 
 plot.subplot(4,4,10)
-plot.plot(setosa['sepal_width'].values,setosa['petal_length'].values,'b+',vi['sepal_width'].values,vi['petal_length'].values,'r+',ve['sepal_width'].values,ve['petal_length'].values,'g+')
+plot.plot(setosa['sepal_width'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 
 plot.subplot(4,4,14)
-plot.plot(setosa['sepal_width'].values,setosa['petal_width'].values,'b+',vi['sepal_width'].values,vi['petal_width'].values,'r+',ve['sepal_width'].values,ve['petal_width'].values,'g+')
+plot.plot(setosa['sepal_width'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.xlabel('Sepal width in cm')
 
 
 plot.subplot(4,4,3)
-plot.plot(setosa['petal_length'].values,setosa['sepal_length'].values,'b+',vi['petal_length'].values,vi['sepal_length'].values,'r+',ve['petal_length'].values,ve['sepal_length'].values,'g+')
+plot.plot(setosa['petal_length'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['sepal_length'].to_numpy(),'g+')
 
 plot.subplot(4,4,7)
-plot.plot(setosa['petal_length'].values,setosa['sepal_width'].values,'b+',vi['petal_length'].values,vi['sepal_width'].values,'r+',ve['petal_length'].values,ve['sepal_width'].values,'g+')
+plot.plot(setosa['petal_length'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 
 plot.subplot(4,4,15)
-plot.plot(setosa['petal_length'].values,setosa['petal_width'].values,'b+',vi['petal_length'].values,vi['petal_width'].values,'r+',ve['petal_length'].values,ve['petal_width'].values,'g+')
+plot.plot(setosa['petal_length'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.xlabel('Petal length in cm')
 
 
 plot.subplot(4,4,4)
-plot.plot(setosa['petal_width'].values,setosa['sepal_length'].values,'b+',label='setosa')
-plot.plot(vi['petal_width'].values,vi['sepal_length'].values,'r+',label='virginica')
-plot.plot(ve['petal_width'].values,ve['sepal_length'].values,'g+',label='versicolor')
+plot.plot(setosa['petal_width'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',label='setosa')
+plot.plot(vi['petal_width'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',label='virginica')
+plot.plot(ve['petal_width'].to_numpy(),ve['sepal_length'].to_numpy(),'g+',label='versicolor')
 # Adapted https://stackoverflow.com/a/43439132
 plot.legend(bbox_to_anchor=(0., 1.02, 1.1, .2), loc="lower left", mode="expand", ncol=3)
 
 plot.subplot(4,4,8)
-plot.plot(setosa['petal_width'].values,setosa['sepal_width'].values,'b+',vi['petal_width'].values,vi['sepal_width'].values,'r+',ve['petal_width'].values,ve['sepal_width'].values,'g+')
+plot.plot(setosa['petal_width'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['petal_width'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['petal_width'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 
 plot.subplot(4,4,12)
-plot.plot(setosa['petal_width'].values,setosa['petal_length'].values,'b+',vi['petal_width'].values,vi['petal_length'].values,'r+',ve['petal_width'].values,ve['petal_length'].values,'g+')
+plot.plot(setosa['petal_width'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['petal_width'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['petal_width'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 
 plot.suptitle('Sepal/Petal width/length pair plots')
 plot.show()
