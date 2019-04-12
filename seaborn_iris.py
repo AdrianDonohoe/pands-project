@@ -5,5 +5,20 @@ import matplotlib.pyplot as plot
 
 sns.set(style="ticks")
 dfs = sns.load_dataset("iris")
-sns.pairplot(dfs, hue="species")
+g=sns.pairplot(dfs, hue="species",markers=["o","s","D"])
+g.fig.suptitle("Sepal/Petal width/length pair plots") # Adapted from https://stackoverflow.com/a/49594152
+plot.subplots_adjust(top=0.9) # Adapted from from https://stackoverflow.com/a/29814281
+plot.show()
+
+
+
+#g=sns.relplot(x=dfs.index,y="sepal_length",hue="species",style="species",data=dfs)
+#g.set(xlabel='Index')
+#plot.show()
+
+
+
+f , axes = plot.subplots(1,2)
+sns.relplot(x=dfs.index,y='petal_length',data=dfs,ax=axes[0],hue='species')
+sns.relplot(x=dfs.index,y='sepal_length',data=dfs,ax=axes[1],hue='species')
 plot.show()
