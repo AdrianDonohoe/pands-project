@@ -127,13 +127,13 @@ plot.show()
 #print('Setosa STD sepal length is ', setosa['sepal_length'].std())
 
 
-y=df.describe()
-y.to_csv('description.csv')
+y=df.describe() # This makes a number of calculations in one go.
+y.to_csv('description.csv') # Used this csv to generate a table for the README
 
-sy=setosa.describe()
-sy.to_csv('setosa_description.csv')
-viy=vi.describe()
-viy.to_csv('virginica_description.csv')
-vey=ve.describe()
-vey.to_csv('versicolor_description.csv')
+sy=setosa.describe() # This makes a number of calculations in one go.
+sy.to_csv('setosa_description.csv') # Used this csv to generate a table for the README
+viy=vi.describe()# This makes a number of calculations in one go.
+viy.to_csv('virginica_description.csv') # Used this csv to generate a table for the README
+vey=ve.describe()# This makes a number of calculations in one go.
+vey.to_csv('versicolor_description.csv') # Used this csv to generate a table for the README
 
