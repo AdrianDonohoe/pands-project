@@ -12,13 +12,10 @@ plot.show()
 
 
 
-#g=sns.relplot(x=dfs.index,y="sepal_length",hue="species",style="species",data=dfs)
-#g.set(xlabel='Index')
-#plot.show()
-
-
-
-f , axes = plot.subplots(1,2)
-sns.relplot(x=dfs.index,y='petal_length',data=dfs,ax=axes[0],hue='species')
-sns.relplot(x=dfs.index,y='sepal_length',data=dfs,ax=axes[1],hue='species')
+f , axes = plot.subplots(nrows=2,ncols=2)  # Adpated from https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_demo.html
+sns.scatterplot(x=dfs.index,y='petal_length',data=dfs,hue='species',ax=axes[0,0]) # Apdapted from https://seaborn.pydata.org/generated/seaborn.scatterplot.html
+sns.scatterplot(x=dfs.index,y='sepal_length',data=dfs,hue='species',ax=axes[0,1])
+sns.scatterplot(x=dfs.index,y='petal_width',data=dfs,hue='species',ax=axes[1,0])
+sns.scatterplot(x=dfs.index,y='sepal_width',data=dfs,hue='species',ax=axes[1,1])
+f.suptitle("Measurements of Petal/Sepal widths/lengths by species")
 plot.show()
