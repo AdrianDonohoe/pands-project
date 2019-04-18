@@ -7,16 +7,16 @@ According to geneticist and author Richard Dawkins, Fisher was the greatest biol
 Fisher viewed himself as a scientist who was especially interested in biology. He did not, however, enjoy learning the names and details of biological structures. He decided to study mathematics, believing it was through mathematics he could make the greatest contributions to biology.[6]
 
 ## The Iris dataset
-The Iris flower data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems. It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.
-The data set consists of 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters.This dataset became a typical test case for many statistical classification techniques in machine learning.[5]
+The Iris flower dataset is a multivariate dataset introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems. It is sometimes called Anderson's Iris dataset because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.
+The dataset consists of 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters.This dataset became a typical test case for many statistical classification techniques in machine learning.[5]
 Two of the three species were collected in the Gaspe Peninsula, Quebec ”all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus”.[7]
-One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.[3]
+One class is linearly separable from the other two; the latter are NOT linearly separable from each other.[3]
 
 The picture below shows the three types of Iris with the first showing the sepal and petal.
 
 ![Some_Iris](Some_Iris.png)
 
-The following table is the entire dataset with a column each for sepal length,sepal width, petal length, petal width and species. 
+The following table is the entire dataset with a column each for sepal length, sepal width, petal length, petal width and species. 
 
 | sepal_length | sepal_width | petal_length | petal_width | species    | 
 |--------------|-------------|--------------|-------------|------------| 
@@ -170,7 +170,7 @@ The following table is the entire dataset with a column each for sepal length,se
 | 6.5          | 3.0         | 5.2          | 2.0         | virginica  | 
 | 6.2          | 3.4         | 5.4          | 2.3         | virginica  | 
 | 5.9          | 3.0         | 5.1          | 1.8         | virginica  | 
-[1]
+
 
 ## Dataset calculations
 
@@ -188,7 +188,7 @@ Some basic calculations on the entire dataset:
 | 50%   | 5.8                | 3.0                | 4.35               | 1.3                | 
 | 75%   | 6.4                | 3.3                | 5.1                | 1.8                | 
 | max   | 7.9                | 4.4                | 6.9                | 2.5                | 
-[1]
+
 
 
 Basic calculations on the Setosa Iris subset
@@ -203,7 +203,7 @@ Basic calculations on the Setosa Iris subset
 | 50%   | 5.0                | 3.4                 | 1.5                | 0.2                 | 
 | 75%   | 5.2                | 3.6750000000000003  | 1.5750000000000002 | 0.3                 | 
 | max   | 5.8                | 4.4                 | 1.9                | 0.6                 | 
-[1]
+
 
 
 Basic calculations on the Virginica Iris subset
@@ -218,7 +218,7 @@ Basic calculations on the Virginica Iris subset
 | 50%   | 6.5                | 3.0                | 5.55               | 2.0                 | 
 | 75%   | 6.9                | 3.1750000000000003 | 5.875000000000001  | 2.3                 | 
 | max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
-[1]
+
 
 Basic calculations on the Versicolor Iris subset
 
@@ -232,7 +232,7 @@ Basic calculations on the Versicolor Iris subset
 | 50%   | 5.9                | 2.8                | 4.35                | 1.3                | 
 | 75%   | 6.3                | 3.0                | 4.6                 | 1.5                | 
 | max   | 7.0                | 3.4                | 5.1                 | 1.8                | 
-[1]
+
 
 ## Python scripts
 
@@ -246,7 +246,7 @@ This script uses the pandas and matplotlib libraries. Pandas is used to read in 
 Usage: python iris.py
 
 __seaborn_iris.py__:
-I was quite content to use matlplotlib for the project plots until I saw the simplicity and visual quality of the seaborn plots in the week 12 video, so I decided to do the plots in seaborn also.
+I was quite content to use matlplotlib for the project plots, and had done so, until I saw the simplicity and visual quality of the seaborn plots in the week 12 video, so I decided to do the plots in seaborn also.
 
 This script imports the iris dataset which is baked into seaborn. I made the same plots in seaborn that was previously made with matplotlib.
 
@@ -271,9 +271,10 @@ Usage: python seaborn_iris.py
 ![4x4_seaborn_subplot](seaborn_4x4_Subplot_of_petal-sepal-lengths-widths.png)
 
 ## The Iris Dataset and Machine Learning
-The dataset is commonly used in machine learning and pattern recognition [3] because prediction is not complex. As you can see in the pair plots above the Setosa is easily distinguishable from the other species. The pair plots also shows that the other two species appear to be sufficiently different along some parameters.[8]
+The dataset is commonly used in demonstrating machine learning and pattern recognition [3] because prediction is not complex. As you can see in the pair plots above the Setosa is easily distinguishable from the other species. The pair plots also shows that the other two species appear to be sufficiently different along some parameters.[8]
 
-
+## Conclusion
+This project has given me a base level knowledge of pandas dataframes, pyplot and seaborn with just a little biology as a bonus. I have written python scripts which performed some calculations on the dataset and made some graphs in matplotlib and seaborn.
 
 ## References
 [1] https://donatstudios.com/CsvToMarkdownTable  CSV to markdown Table
