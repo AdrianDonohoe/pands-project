@@ -30,7 +30,7 @@ The data set consists of 50 samples from each of three species of Iris (Iris Set
 Two of the three species were collected in the Gaspe Peninsula, Quebec ”all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus”.[7]
 One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.[3]
 
-The floowing table is the entire dataset with a column each for sepal length,sepal width, petal length, petal width and species. 
+The following table is the entire dataset with a column each for sepal length,sepal width, petal length, petal width and species. 
 
 | sepal_length | sepal_width | petal_length | petal_width | species    | 
 |--------------|-------------|--------------|-------------|------------| 
@@ -184,15 +184,13 @@ The floowing table is the entire dataset with a column each for sepal length,sep
 | 6.5          | 3.0         | 5.2          | 2.0         | virginica  | 
 | 6.2          | 3.4         | 5.4          | 2.3         | virginica  | 
 | 5.9          | 3.0         | 5.1          | 1.8         | virginica  | 
+[1]
 
-## Python Scripts
+## Dataset calculations
 
+The following calculations were achieved by reading the dataset CSV into a pandas dataframe, then applying the pandas describe() method on the dataframe. This dataframe was then exported to CSV where I used web tool to generate the markdown table.[1]
 
-
-
-
-
-Some basic calculations on the dataset:
+Some basic calculations on the entire dataset:
 
 |       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
 |-------|--------------------|--------------------|--------------------|--------------------| 
@@ -204,6 +202,8 @@ Some basic calculations on the dataset:
 | 50%   | 5.8                | 3.0                | 4.35               | 1.3                | 
 | 75%   | 6.4                | 3.3                | 5.1                | 1.8                | 
 | max   | 7.9                | 4.4                | 6.9                | 2.5                | 
+[1]
+
 
 Basic calculations on the Setosa Iris subset
 
@@ -217,6 +217,7 @@ Basic calculations on the Setosa Iris subset
 | 50%   | 5.0                | 3.4                 | 1.5                | 0.2                 | 
 | 75%   | 5.2                | 3.6750000000000003  | 1.5750000000000002 | 0.3                 | 
 | max   | 5.8                | 4.4                 | 1.9                | 0.6                 | 
+[1]
 
 
 Basic calculations on the Virginica Iris subset
@@ -231,7 +232,7 @@ Basic calculations on the Virginica Iris subset
 | 50%   | 6.5                | 3.0                | 5.55               | 2.0                 | 
 | 75%   | 6.9                | 3.1750000000000003 | 5.875000000000001  | 2.3                 | 
 | max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
-
+[1]
 
 Basic calculations on the Versicolor Iris subset
 
@@ -245,11 +246,38 @@ Basic calculations on the Versicolor Iris subset
 | 50%   | 5.9                | 2.8                | 4.35                | 1.3                | 
 | 75%   | 6.3                | 3.0                | 4.6                 | 1.5                | 
 | max   | 7.0                | 3.4                | 5.1                 | 1.8                | 
+[1]
+
+## Python scripts
+
+There are two scripts in this project.
+
+iris.py and seaborn_iris.py 
+
+__iris.py__:
+This script uses the pandas and matplotlib libraries. Pandas is used to read in the dataset as a dataframe from a CSV and used to split the species into seprate dataframes. Various plots are made using matplotlib pyplot. Some calculations are performed using the pandas describe() method and exported to CSV.
+
+Usage: python iris.py
+
+__seaborn_iris.py__:
+I was quite content to use matlplotlib for the project plots until I saw the simplicity and visual quality of the seaborn plots in the week 12 video, so I decided to do the plots in seaborn also.
+
+This script imports the iris dataset which is baked into seaborn. I made the same plots in seaborn that was previously made with matplotlib.
+
+Usage: python seaborn_iris.py
+
+
+
 
 
 ![2x2_measurements_plot](2x2_measurements.png)
 
+![2x2_measurements__seaborn_plot](seaborn_2x2_measurements.png)
+
+
 ![4x4_subplot](4x4_Subplot_of_petal-sepal-lengths-widths.png)
+
+![4x4_seaborn_subplot](seaborn_4x4_Subplot_of_petal-sepal-lengths-widths.png)
 
 ## References
 [1] https://donatstudios.com/CsvToMarkdownTable  CSV to markdown Table
