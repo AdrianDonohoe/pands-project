@@ -1,22 +1,4 @@
-# pands-project
-
-## Basic Outline
-what is data set about ?
-Who is Ronald Fisher ?
-Describe the data set .
-how was it collected.
-I think the conclusions that Fisher makes would be interesting to know.
-
-High level about the data set - number of rows, columns 
-what do the columns look like ? average petal length of a satosa ...
-Pick out relevant and interesting stuff
-
-One of the types can be separated easily from the other two
-
-Add tables and graphs
-
-Explain the python script. Read in the file, do some calculations, averages, standard deviations. Make some plots.
-
+# pands-project The Fisher Iris Dataset
 
 ## Introduction
 The Fisher Iris dataset is perhaps the best known database to be found in pattern recognition literature.[2] Although Ronald Fisher’s name is less well-known than some others, he was one of the twentieth century’s greatest scientists.
@@ -29,6 +11,10 @@ The Iris flower data set is a multivariate data set introduced by the British st
 The data set consists of 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters.This dataset became a typical test case for many statistical classification techniques in machine learning.[5]
 Two of the three species were collected in the Gaspe Peninsula, Quebec ”all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus”.[7]
 One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.[3]
+
+The picture below shows the three types of Iris with the first showing the sepal and petal.
+
+![Some_Iris](Some_Iris.png)
 
 The following table is the entire dataset with a column each for sepal length,sepal width, petal length, petal width and species. 
 
@@ -266,18 +252,28 @@ This script imports the iris dataset which is baked into seaborn. I made the sam
 
 Usage: python seaborn_iris.py
 
+## Plots
 
-
-
+### Plot of basic dataset properties using Pyplot
 
 ![2x2_measurements_plot](2x2_measurements.png)
 
+### Plot of basic dataset properties using Seaborn
+
 ![2x2_measurements__seaborn_plot](seaborn_2x2_measurements.png)
 
+### Pair plots of dataset properties using Pyplot
 
 ![4x4_subplot](4x4_Subplot_of_petal-sepal-lengths-widths.png)
 
+### Pair plots of dataset properties using Seaborn
+
 ![4x4_seaborn_subplot](seaborn_4x4_Subplot_of_petal-sepal-lengths-widths.png)
+
+## The Iris Dataset and Machine Learning
+The dataset is commonly used in machine learning and pattern recognition [3] because prediction is not complex. As you can see in the pair plots above the Setosa is easily distinguishable from the other species. The pair plots also shows that the other two species appear to be sufficiently different along some parameters.[8]
+
+
 
 ## References
 [1] https://donatstudios.com/CsvToMarkdownTable  CSV to markdown Table
@@ -293,3 +289,5 @@ Usage: python seaborn_iris.py
 [6] https://www.famousscientists.org/ronald-fisher/
 
 [7] https://www.academia.edu/13069408/Report_on_Edgar_Anderson_s_Iris_Data_Analysis
+
+[8] https://rpubs.com/nandong/imlp-ch1-iris
