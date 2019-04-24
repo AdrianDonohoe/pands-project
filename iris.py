@@ -10,13 +10,13 @@ df = pd.read_csv('iris.csv')
 # Adapted from https://stackoverflow.com/a/17071908
 # Separate species into different dataframes
 setosa = df.loc[df['species'] == 'setosa']   # Access a Dataframe by label species=setosa and assign to setosa variable
-virginica = df.loc[df['species'] == 'virginica']
-versicolor = df.loc[df['species'] == 'versicolor']
+virginica = df.loc[df['species'] == 'virginica'] # Creating a virginica dataframe
+versicolor = df.loc[df['species'] == 'versicolor'] # Creating a versicolor dataframe
 
 # Adapted from https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
 s = pd.Series(range(0,50)) # makes a pandas Series used to reindex the virginica and versicolor indexes
-vi = virginica.set_index(s)
-ve = versicolor.set_index(s)  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
+vi = virginica.set_index(s) # set the index of the virginica dataframe
+ve = versicolor.set_index(s)  # set the index of the versicolor dataframe , https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index
 
 
 #https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html?highlight=subplot#matplotlib.pyplot.subplot
@@ -24,7 +24,7 @@ plot.subplot(2,2,1) # make a subplot with 2 rows,2 columns at index 1
 plot.plot(setosa['sepal_length'],'b.',vi['sepal_length'],'r.',ve['sepal_length'],'g.') # Plot the sepal lenghts of the 3 species in blue,red and green dots
 plot.ylabel('Sepal Length in cm')  # Add a label to the y-axis
 labels = ['Setosa','Virginica','Versicolor'] # will use this list to add a legend
-plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html
+plot.legend(labels) # Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html. Adds a legend using the 'labels' list
 
 plot.subplot(2,2,2) # make a subplot with 2 rows,2 columns at index 2
 plot.plot(setosa['sepal_width'],'b.',vi['sepal_width'],'r.',ve['sepal_width'],'g.')
@@ -46,7 +46,8 @@ plot.show()  # Show the 2x2 Subplot (Plot saved as 2x2_measurements.png and disp
 
 # adapted https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
 # Using matplotlib instead of seaborn, I have recreated the 4x4 subplots from this kaggle project
-plot.subplot(4,4,5)
+plot.subplot(4,4,5) # make a subplot with 4 rows,4 columns at index 5
+# The following takes the sepal length and width for each species. We apply the to_numpy() method to create a numpy array for plotting.
 plot.plot(setosa['sepal_length'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 plot.ylabel('Sepal width in cm')
 

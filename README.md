@@ -292,3 +292,6 @@ This project has given me a base level knowledge of pandas dataframes, pyplot an
 [7] https://www.academia.edu/13069408/Report_on_Edgar_Anderson_s_Iris_Data_Analysis
 
 [8] https://rpubs.com/nandong/imlp-ch1-iris
+
+
+![describe](setosadescribe.html)
