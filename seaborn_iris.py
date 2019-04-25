@@ -53,3 +53,15 @@ plot.show()
 #sns.scatterplot(x=dfs.index,y='sepal_width',data=dfs,hue='species',ax=axes[1,1],style='species')
 #f.suptitle("Measurements of Petal/Sepal widths/lengths by species") # Adds a super-title to the figure
 #plot.show()
+
+sns.violinplot(data=dfs,x='species',y='petal_length')
+plot.show()
+
+sns.violinplot(data=dfs,x='species',y='petal_width')
+plot.show()
+
+sns.violinplot(data=dfs,x='species',y='sepal_length')
+plot.show()
+
+sns.violinplot(data=dfs,x='species',y='sepal_width')
+plot.show()

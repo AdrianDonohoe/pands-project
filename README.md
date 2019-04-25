@@ -270,6 +270,18 @@ Usage: python seaborn_iris.py
 
 ![4x4_seaborn_subplot](seaborn_4x4_Subplot_of_petal-sepal-lengths-widths.png)
 
+### Violin plots by species
+
+![violin_petal_length](petal_length_violin.png)
+
+![violin_petal_width](petal_width_violin.png)
+
+![violin_sepal_length](sepal_length_violin.png)
+
+![violin_sepal_width](sepal_width_violin.png)
+
+
+
 ## The Iris Dataset and Machine Learning
 The dataset is commonly used in demonstrating machine learning and pattern recognition [3] because prediction is not complex. As you can see in the pair plots above the Setosa is easily distinguishable from the other species. The pair plots also shows that the other two species appear to be sufficiently different along some parameters.[8]
 
