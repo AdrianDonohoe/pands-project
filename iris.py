@@ -51,74 +51,74 @@ plot.subplot(4,4,5) # make a subplot with 4 rows,4 columns at index 5
 plot.plot(setosa['sepal_length'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 plot.ylabel('Sepal width in cm')
 
-plot.subplot(4,4,9)
+plot.subplot(4,4,9) # Subplot for sepal length vs petal length
 plot.plot(setosa['sepal_length'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 plot.ylabel('Petal length in cm')
 
-plot.subplot(4,4,13)
+plot.subplot(4,4,13) # Subplot for sepal length vs petal width
 plot.plot(setosa['sepal_length'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['sepal_length'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['sepal_length'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.ylabel('Petal width in cm')
 plot.xlabel('Sepal length in cm')
 
 # Adapted from https://matplotlib.org/examples/statistics/histogram_demo_multihist.html
-plot.subplot(4,4,1)
+plot.subplot(4,4,1) # Subplot for sepal length histogram
 x_multi = [setosa['sepal_length'],vi['sepal_length'],ve['sepal_length']]
-colours = ['blue','red','green']
+colours = ['blue','red','green'] # list to be used for histogram color parameter
 plot.ylabel('Sepal length in cm')
-plot.hist(x_multi,bins=10,stacked=True,color=colours)
+plot.hist(x_multi,bins=10,stacked=True,color=colours) # plot a stacked histogram
 
-plot.subplot(4,4,6)
+plot.subplot(4,4,6)  # Subplot for sepal width histogram
 x1_multi = [setosa['sepal_width'],vi['sepal_width'],ve['sepal_width']]
 colours = ['blue','red','green']
 plot.hist(x1_multi,bins=10,stacked=True,color=colours)
 
-plot.subplot(4,4,11)
+plot.subplot(4,4,11) # Subplot for petal length histogram
 x2_multi = [setosa['petal_length'],vi['petal_length'],ve['petal_length']]
 colours = ['blue','red','green']
 plot.hist(x2_multi,bins=10,stacked=True,color=colours)
 
-plot.subplot(4,4,16)
+plot.subplot(4,4,16) # Subplot for petal width histogram
 x3_multi = [setosa['petal_width'],vi['petal_width'],ve['petal_width']]
 colours = ['blue','red','green']
 plot.hist(x3_multi,bins=10,stacked=True,color=colours)
 plot.xlabel('Petal width in cm')
 
-plot.subplot(4,4,2)
+plot.subplot(4,4,2) # Subplot for sepal width vs sepal length
 plot.plot(setosa['sepal_width'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['sepal_length'].to_numpy(),'g+')
 
-plot.subplot(4,4,10)
+plot.subplot(4,4,10) # Subplot for sepal width vs petal length
 plot.plot(setosa['sepal_width'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 
-plot.subplot(4,4,14)
+plot.subplot(4,4,14) # Subplot for sepal width vs petal width
 plot.plot(setosa['sepal_width'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['sepal_width'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['sepal_width'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.xlabel('Sepal width in cm')
 
 
-plot.subplot(4,4,3)
+plot.subplot(4,4,3) # Subplot for petal length vs sepal length
 plot.plot(setosa['petal_length'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['sepal_length'].to_numpy(),'g+')
 
-plot.subplot(4,4,7)
+plot.subplot(4,4,7) # Subplot for petal length vs sepal width
 plot.plot(setosa['petal_length'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 
-plot.subplot(4,4,15)
+plot.subplot(4,4,15) # Subplot for petal length vs petal width
 plot.plot(setosa['petal_length'].to_numpy(),setosa['petal_width'].to_numpy(),'b+',vi['petal_length'].to_numpy(),vi['petal_width'].to_numpy(),'r+',ve['petal_length'].to_numpy(),ve['petal_width'].to_numpy(),'g+')
 plot.xlabel('Petal length in cm')
 
 
-plot.subplot(4,4,4)
+plot.subplot(4,4,4) # Subplot for petal width vs sepal length with labels
 plot.plot(setosa['petal_width'].to_numpy(),setosa['sepal_length'].to_numpy(),'b+',label='setosa')
 plot.plot(vi['petal_width'].to_numpy(),vi['sepal_length'].to_numpy(),'r+',label='virginica')
 plot.plot(ve['petal_width'].to_numpy(),ve['sepal_length'].to_numpy(),'g+',label='versicolor')
 # Adapted https://stackoverflow.com/a/43439132
-plot.legend(bbox_to_anchor=(0., 1.02, 1.1, .2), loc="lower left", mode="expand", ncol=3)
+plot.legend(bbox_to_anchor=(0., 1.02, 1.1, .2), loc="lower left", mode="expand", ncol=3) # 3 column label legend achored to box, using lower left as starting point
 
-plot.subplot(4,4,8)
+plot.subplot(4,4,8) # Subplot for petal width vs sepal width with labels
 plot.plot(setosa['petal_width'].to_numpy(),setosa['sepal_width'].to_numpy(),'b+',vi['petal_width'].to_numpy(),vi['sepal_width'].to_numpy(),'r+',ve['petal_width'].to_numpy(),ve['sepal_width'].to_numpy(),'g+')
 
-plot.subplot(4,4,12)
+plot.subplot(4,4,12) # Subplot for petal width vs petal length with labels
 plot.plot(setosa['petal_width'].to_numpy(),setosa['petal_length'].to_numpy(),'b+',vi['petal_width'].to_numpy(),vi['petal_length'].to_numpy(),'r+',ve['petal_width'].to_numpy(),ve['petal_length'].to_numpy(),'g+')
 
-plot.suptitle('Sepal/Petal width/length pair plots')
+plot.suptitle('Sepal/Petal width/length pair plots') # Adds a super title to the 4x4 plot. Adapted from https://matplotlib.org/api/_as_gen/matplotlib.pyplot.suptitle.html
 plot.show()
 
 #print('Setosa min sepal length is ', setosa['sepal_length'].min())

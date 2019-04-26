@@ -1,4 +1,4 @@
-# pands-project The Fisher Iris Dataset
+# PANDS project  - The Fisher Iris Dataset
 
 ## Introduction
 The Fisher Iris dataset is perhaps the best known database to be found in pattern recognition literature.[2] Although Ronald Fisher’s name is less well-known than some others, he was one of the twentieth century’s greatest scientists.
@@ -291,7 +291,7 @@ This project has given me a base level knowledge of pandas dataframes, pyplot an
 ## References
 [1] https://donatstudios.com/CsvToMarkdownTable  CSV to markdown Table
 
-[2] http://archive.ics.uci.edu/ml/datasets/Iris.names
+[2] http://archive.ics.uci.edu/ml/datasets/Iris
 
 [3] https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.names
 
